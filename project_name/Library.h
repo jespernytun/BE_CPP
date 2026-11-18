@@ -20,7 +20,7 @@ public:
 };
 
 class TemperatureSensor : public Sensor {
-
+public:
   // Definition of the virtual function used to read values from the sensor
   // Returns a float representing the temperature in celcius
   float getValue() override;
@@ -28,21 +28,21 @@ class TemperatureSensor : public Sensor {
 };
 
 class HumiditySensor : public Sensor {
-
+public:
   // Returns the a float representing humidity captured in the air in %
   float getValue() override;
   
 };
 
 class NoiseSensor : public Sensor {
-
+public:
   // Returns a float representing noise level in dB
   float getValue() override;
   
 };
 
 class LightSensor : public Sensor {
-
+public:
   // Returns a float representing light
   float getValue() override;
   
