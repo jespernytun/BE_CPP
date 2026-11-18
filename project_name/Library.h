@@ -39,7 +39,14 @@ class NoiseSensor : public Sensor {
   // Returns a float representing noise level in dB
   float getValue() override;
   
-}
+};
+
+class LightSensor : public Sensor {
+
+  // Returns a float representing light
+  float getValue() override;
+  
+};
 
 
 #endif
