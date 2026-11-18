@@ -27,7 +27,10 @@ protected:
 public:
 
   // Constructor for sensor type
-  Sensor(const string& name, int pin) : Peripheral(name) {}
+  Sensor(const string& name, int pin) : Peripheral(name) {
+    this->pin = pin;
+    sensor_value = 0;
+  }
 
   // function used to read value from sensor
   virtual float getValue()=0;

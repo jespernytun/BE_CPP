@@ -2,15 +2,7 @@
 
 #include "Library.h"
 
-
-
-// This function works as a general constructor for all sensor types
-// Sets the pin to our integer value and sets sensor_value to 0
-Sensor::Sensor(int pin){
-  this->pin = pin;
-  sensor_value = 0;
-}
-
+// This function works as a general constructor for all sensor 
 // Returns current temperature in celcius
 TemperatureSensor::getValue() {
 
@@ -27,6 +19,12 @@ HumiditySensor::getValue() {
 
 // Returns current noise level in dB
 NoiseSensor::getValue() {
+
+  // code
+
+}
+
+LightSensor::getValue() {
 
   // code
   
