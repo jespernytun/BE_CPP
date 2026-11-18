@@ -1,9 +1,12 @@
 // Library for our arduino project
 
+#ifndef LIBRARY_H_
+#define LIBRARY_H_
 
 // Default sensor 
 class Sensor {
 protected:
+  int pin;
   float sensor_value;
   
 public:
@@ -26,7 +29,17 @@ class TemperatureSensor : public Sensor {
 
 class HumiditySensor : public Sensor {
 
-  // Returns the a float representing humidity captured in the air
+  // Returns the a float representing humidity captured in the air in %
   float getValue() override;
   
 };
+
+class NoiseSensor : public Sensor {
+
+  // Returns a float representing noise level in dB
+  float getValue() override;
+  
+}
+
+
+#endif
