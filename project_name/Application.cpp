@@ -11,22 +11,3 @@ Application::Application()
   // Code
   ; 
 }
-  
-Application::~Application()
-{
-  // Code
-  ;
-}  
-
-void Application::init(void)
-{
-  // Code
-    ;
-}
-
-
-void Application::run(void)
-{
-  // Code
-    ;
-}
