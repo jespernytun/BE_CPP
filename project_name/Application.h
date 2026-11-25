@@ -5,6 +5,9 @@
  *********************************************************************/
 #ifndef APPLICATION_H_
 #define APPLICATION_H_
+#include "rgb_lcd.h"
+#include "SHT31.h"
+#include "Library.h"
 
 /**
   * @class Application
@@ -12,6 +15,9 @@
 */    
 class Application
 {
+  private:
+    rgb_lcd lcd;
+    SHT31 sht31;
   public :
     /**
      * @fn Application();

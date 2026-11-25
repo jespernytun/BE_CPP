@@ -4,16 +4,15 @@
  * @brief Fichier source de l'application
  *********************************************************************/
 #include "Application.h"
-#include <wire.h>
+#include <Wire.h>
 #include "rgb_lcd.h"
 #include "SHT31.h"
-#include "library.h"
+#include "Library.h"
 
 
 Application::Application()
 {
-  // Code
-  ; 
+  ;
 }
   
 Application::~Application()
@@ -24,21 +23,29 @@ Application::~Application()
 
 void Application::init(void)
 {
-
-  lcd_rgb lcd;
-  SHT31 sht31;
-
   Wire.begin();
-  lcd.begin();
+  lcd.begin(16, 2);
   sht31.begin();
-
-  lcd.print("moren til Brage!");
-  
 }
 
 
 void Application::run(void)
 {
-  // Code
-    ;
+  float temp = sht31.getTemperature();
+  float hum = sht31.getHumidity();
+  float noise = analogRead(A0);
+
+  // print temperature on left side of 1st row
+  lcd.setCursor(0, 0);
+  lcd.print("T:");
+  lcd.print(temp, 1);
+  lcd.print("C  ");
+
+  // print humidity on right side of 1st row
+  lcd.print("H:");
+  lcd.print(hum, 1);
+  lcd.print("%");
+  lcd.setCursor(0, 1);
+  lcd.print("Noise:");
+  lcd.print(noise, 0);
 }

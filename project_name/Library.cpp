@@ -5,12 +5,12 @@
 // Library for the temperature and humidity sensors
 
 // Returns current noise level in dB
-NoiseSensor::getValue() {
+float NoiseSensor::getValue() {
   sensor_value = analogRead(pin);
   return sensor_value;
 }
 
-LightSensor::getValue() {
+float LightSensor::getValue() {
   sensor_value = analogRead(pin);
   return sensor_value;
 }

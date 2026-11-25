@@ -5,19 +5,16 @@
 
 #include "rgb_lcd.h"
 
-#include <string>
-
-using namespace std;
 
 // class for all types of devices in this project
 class Peripheral {
 protected:
-  string name;
+  String name;
 public:
-  Peripheral(const string& name) : name(name) {}
+  Peripheral(const String& name) : name(name) {}
   virtual ~Peripheral() {}
   // Tells us the type of peripheral we1re working with
-  const string& getName() const { return name; }
+  const String& getName() const { return name; }
 };
 
 // Default sensor type
@@ -29,7 +26,7 @@ protected:
 public:
 
   // Constructor for sensor type
-  Sensor(const string& name, int pin) : Peripheral(name) {
+  Sensor(const String& name, int pin) : Peripheral(name) {
     this->pin = pin;
     sensor_value = 0;
   }

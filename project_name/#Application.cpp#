@@ -1,0 +1,37 @@
+/*********************************************************************
+ * @file  Apllication.cpp
+ * @author <mettre l'adresse mail ou nom prenom>
+ * @brief Fichier source de l'application
+ *********************************************************************/
+#include "Application.h"
+#include "SHT31.h"
+#include "rgb_lcd.h"
+#include "Library.h"
+
+#define LCD_SDA 
+
+Application::Application()
+{
+  // Code
+  ; 
+}
+  
+Application::~Application()
+{
+  // Code
+  ;
+}  
+
+void Application::init(void)
+{
+  rgb_lcd lcd();
+
+  
+}
+
+
+void Application::run(void)
+{
+  // Code
+    ;
+}
