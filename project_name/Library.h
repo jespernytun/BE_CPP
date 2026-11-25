@@ -3,6 +3,8 @@
 #ifndef LIBRARY_H_
 #define LIBRARY_H_
 
+#include "rgb_lcd.h"
+
 #include <string>
 
 using namespace std;
@@ -37,22 +39,7 @@ public:
 
 };
 
-class TemperatureSensor : public Sensor {
-public:
-  TemperatureSensor(int pin) : Sensor("Temperature", pin) {}
-  // Definition of the virtual function used to read values from the sensor
-  // Returns a float representing the temperature in celcius
-  float getValue() override;
-
-};
-
-class HumiditySensor : public Sensor {
-public:
-  HumiditySensor(int pin) : Sensor("Humidity", pin) {}
-  // Returns the a float representing humidity captured in the air in %
-  float getValue() override;
-  
-};
+// Temp and Humidity not needed because included in SHT31.h
 
 class NoiseSensor : public Sensor {
 public:
